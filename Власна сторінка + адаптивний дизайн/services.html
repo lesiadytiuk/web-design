@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HealthSpecialist — Services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body class="site">
+
+<header class="topbar">
+    <div class="topbar__brand brand">
+        <span class="brand__node brand__node--a"></span>
+        <span class="brand__node brand__node--b"></span>
+        <span class="brand__node brand__node--c"></span>
+        <span class="brand__node brand__node--d"></span>
+        <span class="brand__label">HealthSpecialist</span>
+    </div>
+
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="index.html">HOME</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">ABOUT</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--active" href="services.html">SERVICES</a></li>
+            <li class="menu__item menu__item--has-panel">
+                <a class="menu__link" href="#">DOCTORS</a>
+
+                <div class="panel">
+                    <div class="panel__row">Phillis K Vance MD</div>
+                    <div class="panel__row">Stanley K Hudson MD</div>
+                    <div class="panel__row">Kevin D Malone MD</div>
+                    <div class="panel__row">Angela S Martin MD</div>
+                    <div class="panel__row">Marta D Piterson MD</div>
+                    <div class="panel__row">Piter M Jonson DD</div>
+                </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#contacts">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="topbar__actions">
+        <a class="auth-btn" href="#">LOG IN</a>
+        <a class="btn btn--outline" href="#">SIGN UP</a>
+    </div>
+</header>
+
+<main class="services-page">
+
+    <!-- HERO -->
+    <section class="svc-hero fade-in">
+        <div class="svc-hero__bg"></div>
+
+        <div class="svc-hero__inner">
+            <div class="svc-hero__content">
+                <h1 class="svc-hero__title">All Care You Need<br> In One Place</h1>
+                <p class="svc-hero__text">
+                    Choose from a wide range of diagnostics, treatments and recovery programs.
+                    Book visits online, get results digitally and stay connected with your doctor.
+                </p>
+                <div class="svc-hero__actions">
+                    <a href="#svc-list" class="btn btn--primary">View services</a>
+                    <a href="#contacts" class="btn svc-hero__btn-secondary">Book appointment</a>
+                </div>
+            </div>
+
+            <div class="svc-hero__visual">
+                <img src="assets/services-hero-illustration.png"
+                     alt="Medical services illustration"
+                     class="svc-hero__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="svc-why fade-in">
+        <h2 class="svc-section-title">Why Patients Choose Us</h2>
+        <p class="svc-section-subtitle">
+            We combine experience, technology and personal care to deliver safe and efficient treatment.
+        </p>
+
+        <div class="svc-why__grid">
+            <article class="svc-why__item">
+                <div class="svc-why__icon-circle">
+                    <img src="assets/icon-team.png" alt="">
+                </div>
+                <h3 class="svc-why__title">Certified Doctors</h3>
+                <p class="svc-why__text">
+                    Board-certified specialists with years of practical experience in leading clinics.
+                </p>
+            </article>
+
+            <article class="svc-why__item">
+                <div class="svc-why__icon-circle">
+                    <img src="assets/icon-support.png" alt="">
+                </div>
+                <h3 class="svc-why__title">24/7 Support</h3>
+                <p class="svc-why__text">
+                    Emergency line and quick consultations for urgent questions and health concerns.
+                </p>
+            </article>
+
+            <article class="svc-why__item">
+                <div class="svc-why__icon-circle">
+                    <img src="assets/icon-equipment.png" alt="">
+                </div>
+                <h3 class="svc-why__title">Modern Equipment</h3>
+                <p class="svc-why__text">
+                    Digital diagnostics, lab tests and imaging to detect conditions at early stages.
+                </p>
+            </article>
+
+            <article class="svc-why__item">
+                <div class="svc-why__icon-circle">
+                    <img src="assets/icon-care.png" alt="">
+                </div>
+                <h3 class="svc-why__title">Personalized Care</h3>
+                <p class="svc-why__text">
+                    Individual treatment plans tailored to your lifestyle, age and medical history.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- SERVICE CATEGORIES / CHIPS -->
+    <section class="svc-categories fade-in">
+        <h2 class="svc-section-title">Service Categories</h2>
+        <p class="svc-section-subtitle">
+            Quickly navigate through the main types of care available at our clinic.
+        </p>
+
+        <div class="svc-categories__scroll">
+            <button class="svc-chip svc-chip--active">Family Care</button>
+            <button class="svc-chip">Cardiology</button>
+            <button class="svc-chip">Physical Therapy</button>
+            <button class="svc-chip">Diagnostics</button>
+            <button class="svc-chip">Preventive Care</button>
+            <button class="svc-chip">Online Consultations</button>
+        </div>
+    </section>
+
+    <!-- FEATURED SERVICE -->
+    <section class="svc-featured fade-in">
+        <div class="svc-featured__content">
+            <h2 class="svc-section-title svc-section-title--left">Comprehensive Cardiology Program</h2>
+            <p class="svc-featured__text">
+                Early detection and prevention of heart diseases with a complete diagnostics package:
+            </p>
+            <ul class="svc-featured__list">
+                <li>ECG, ultrasound and blood tests in one visit</li>
+                <li>Consultation with a cardiologist and treatment plan</li>
+                <li>Follow-up online check-ins and lifestyle recommendations</li>
+            </ul>
+            <a href="#contacts" class="btn btn--primary">Schedule check</a>
+        </div>
+
+        <div class="svc-featured__visual">
+            <img src="assets/featured-cardiology.png"
+                 alt="Cardiology diagnostics"
+                 class="svc-featured__image">
+        </div>
+    </section>
+
+    <!-- MAIN SERVICES GRID -->
+    <section id="svc-list" class="svc-services-grid fade-in">
+        <h2 class="svc-section-title">Main Services</h2>
+        <p class="svc-section-subtitle">
+            Most requested services our patients use on a daily basis.
+        </p>
+
+        <div class="svc-services-grid__inner">
+
+            <article class="svc-service-card">
+                <img src="assets/icon-family.png" alt="" class="svc-service-card__icon">
+                <h3 class="svc-service-card__title">Family Medicine</h3>
+                <p class="svc-service-card__text">
+                    Ongoing care for adults and children: routine visits, vaccination, chronic disease management.
+                </p>
+                <a href="#contacts" class="svc-service-card__link">Book family visit →</a>
+            </article>
+
+            <article class="svc-service-card">
+                <img src="assets/icon-stethoscope.png" alt="" class="svc-service-card__icon">
+                <h3 class="svc-service-card__title">Internal Medicine</h3>
+                <p class="svc-service-card__text">
+                    Management of complex health conditions, prevention programs and long-term treatment.
+                </p>
+                <a href="#contacts" class="svc-service-card__link">Talk to internist →</a>
+            </article>
+
+            <article class="svc-service-card">
+                <img src="assets/icon-therapy.png" alt="" class="svc-service-card__icon">
+                <h3 class="svc-service-card__title">Physical Therapy</h3>
+                <p class="svc-service-card__text">
+                    Recovery after injuries and surgeries, mobility improvement and pain relief programs.
+                </p>
+                <a href="#contacts" class="svc-service-card__link">Start rehab program →</a>
+            </article>
+
+            <article class="svc-service-card">
+                <img src="assets/icon-lab.png" alt="" class="svc-service-card__icon">
+                <h3 class="svc-service-card__title">Laboratory Tests</h3>
+                <p class="svc-service-card__text">
+                    Wide spectrum of blood and urine tests with fast digital delivery of results.
+                </p>
+                <a href="#contacts" class="svc-service-card__link">View test packages →</a>
+            </article>
+
+            <article class="svc-service-card">
+                <img src="assets/icon-online.png" alt="" class="svc-service-card__icon">
+                <h3 class="svc-service-card__title">Online Consultations</h3>
+                <p class="svc-service-card__text">
+                    Secure video calls with your doctor, prescription renewals and remote monitoring.
+                </p>
+                <a href="#contacts" class="svc-service-card__link">Book online call →</a>
+            </article>
+
+            <article class="svc-service-card">
+                <img src="assets/icon-preventive.png" alt="" class="svc-service-card__icon">
+                <h3 class="svc-service-card__title">Preventive Checkups</h3>
+                <p class="svc-service-card__text">
+                    Annual health check programs for early detection and lifestyle adjustment.
+                </p>
+                <a href="#contacts" class="svc-service-card__link">Choose checkup plan →</a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- DOCTORS SCROLL -->
+    <section class="svc-doctors fade-in">
+        <h2 class="svc-section-title">Doctors You May Need</h2>
+
+        <div class="svc-doctors__scroll">
+            <article class="svc-doctor-card">
+                <img src="assets/doctor-1-5030f4.png" alt="" class="svc-doctor-card__photo">
+                <div>
+                    <h3 class="svc-doctor-card__name">Phillis K Vance MD</h3>
+                    <span class="svc-doctor-card__spec">Family Medicine</span>
+                </div>
+            </article>
+
+            <article class="svc-doctor-card">
+                <img src="assets/doctor-2-2d8bb5.png" alt="" class="svc-doctor-card__photo">
+                <div>
+                    <h3 class="svc-doctor-card__name">Stanley K Hudson MD</h3>
+                    <span class="svc-doctor-card__spec">Internal Medicine</span>
+                </div>
+            </article>
+
+            <article class="svc-doctor-card">
+                <img src="assets/doctor-3-4cf5be.png" alt="" class="svc-doctor-card__photo">
+                <div>
+                    <h3 class="svc-doctor-card__name">Kevin D Malone MD</h3>
+                    <span class="svc-doctor-card__spec">Cardiology</span>
+                </div>
+            </article>
+
+            <article class="svc-doctor-card">
+                <img src="assets/doctor-3-4cf5be1.png" alt="" class="svc-doctor-card__photo">
+                <div>
+                    <h3 class="svc-doctor-card__name">Angela S Martin MD</h3>
+                    <span class="svc-doctor-card__spec">Psychologist</span>
+                </div>
+            </article>
+
+            <article class="svc-doctor-card">
+                <img src="assets/doctor-3-4cf5be12.png" alt="" class="svc-doctor-card__photo">
+                <div>
+                    <h3 class="svc-doctor-card__name">Piter M Jonson DD</h3>
+                    <span class="svc-doctor-card__spec">Physical Therapist</span>
+                </div>
+            </article>
+
+            <article class="svc-doctor-card">
+                <img src="assets/doctor-3-4cf5be13.png" alt="" class="svc-doctor-card__photo">
+                <div>
+                    <h3 class="svc-doctor-card__name">Marta D Piterson MD</h3>
+                    <span class="svc-doctor-card__spec">Surgeon</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="svc-testimonials fade-in">
+        <h2 class="svc-section-title">What Our Patients Say</h2>
+
+        <div class="svc-testimonials__grid">
+            <article class="svc-testimonial">
+                <p class="svc-testimonial__text">
+                    “Booking an appointment online and getting test results in my phone saved me so much time.”
+                </p>
+                <p class="svc-testimonial__name">— Anna K., regular patient</p>
+            </article>
+
+            <article class="svc-testimonial">
+                <p class="svc-testimonial__text">
+                    “The cardiology program helped me change my lifestyle and control my blood pressure.”
+                </p>
+                <p class="svc-testimonial__name">— Michael D.</p>
+            </article>
+
+            <article class="svc-testimonial">
+                <p class="svc-testimonial__text">
+                    “Doctors always explain every step and make sure I understand the treatment plan.”
+                </p>
+                <p class="svc-testimonial__name">— Sofia L.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="svc-faq fade-in">
+        <h2 class="svc-section-title">FAQ</h2>
+
+        <div class="svc-faq__items">
+            <details class="svc-faq__item">
+                <summary>How can I book an appointment?</summary>
+                <p>You can call us, use the contact form or book directly through the online portal.</p>
+            </details>
+
+            <details class="svc-faq__item">
+                <summary>Do you accept insurance plans?</summary>
+                <p>Yes, we work with most major insurance providers. Contact reception for details.</p>
+            </details>
+
+            <details class="svc-faq__item">
+                <summary>Can I get my test results online?</summary>
+                <p>Results are delivered securely to your personal account and can be discussed with your doctor.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="svc-steps fade-in">
+        <h2 class="svc-section-title">How It Works</h2>
+
+        <div class="svc-steps__grid">
+            <div class="svc-step">
+                <div class="svc-step__circle">1</div>
+                <h3 class="svc-step__title">Choose service</h3>
+                <p class="svc-step__text">Pick the type of care you need from our services list.</p>
+            </div>
+
+            <div class="svc-step">
+                <div class="svc-step__circle">2</div>
+                <h3 class="svc-step__title">Select doctor</h3>
+                <p class="svc-step__text">Find a specialist and time slot that works best for you.</p>
+            </div>
+
+            <div class="svc-step">
+                <div class="svc-step__circle">3</div>
+                <h3 class="svc-step__title">Visit & follow-up</h3>
+                <p class="svc-step__text">Come to the clinic or connect online and continue treatment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contacts" class="svc-contact fade-in">
+        <div class="svc-contact__inner">
+            <h2 class="svc-contact__title">Ready to book your visit?</h2>
+            <p class="svc-contact__text">
+                Call us, send an email or come directly to the clinic — we will help you choose the best option.
+            </p>
+
+            <div class="svc-contact__grid">
+                <a class="svc-contact__box" href="tel:+14041234567">
+                    <span class="svc-contact__label">Call Us</span>
+                    <span class="svc-contact__value">(404) 123-4567</span>
+                </a>
+
+                <a class="svc-contact__box" href="mailto:info@healthspecialist.com">
+                    <span class="svc-contact__label">Email</span>
+                    <span class="svc-contact__value">info@healthspecialist.com</span>
+                </a>
+
+                <div class="svc-contact__box">
+                    <span class="svc-contact__label">Location</span>
+                    <span class="svc-contact__value">123 Greenway Rd, Atlanta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
