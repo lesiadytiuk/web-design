@@ -1,0 +1,255 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HealthSpecialist</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						accent: '#4593FF',
+						soft: '#F8FBFF',
+						dark: '#3B4053'
+					},
+					borderRadius: {
+						'r-s': '5px',
+						'r-m': '10px'
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		body { font-family: 'Montserrat', sans-serif; }
+	</style>
+</head>
+<body class="site bg-white text-dark">
+
+<header class="topbar sticky top-0 z-50 flex items-center justify-between bg-accent px-6 md:px-10 py-4">
+	<div class="brand relative flex h-9 w-[203px] items-center">
+		<span class="brand__node absolute left-[11px] top-0 h-[13px] w-[13px] rounded-full bg-soft"></span>
+		<span class="brand__node absolute left-[23px] top-[11px] h-[13px] w-[13px] rounded-full bg-soft"></span>
+		<span class="brand__node absolute left-0 top-[11px] h-[13px] w-[13px] rounded-full bg-soft"></span>
+		<span class="brand__node absolute left-[11px] top-[23px] h-[13px] w-[13px] rounded-full bg-soft"></span>
+		<span class="brand__label ml-[46px] text-[19px] font-bold text-white">HealthSpecialist</span>
+	</div>
+
+	<nav class="menu flex flex-1 justify-center">
+		<ul class="menu__list flex list-none gap-6 md:gap-10 xl:gap-[70px] text-[11px] md:text-[13px] font-medium">
+			<li><a href="index.html" class="menu__link text-soft no-underline">HOME</a></li>
+			<li><a href="#" class="menu__link text-soft no-underline">ABOUT</a></li>
+			<li><a href="services.html" class="menu__link text-soft no-underline">SERVICES</a></li>
+			<li class="relative group">
+				<a href="#staff" class="menu__link text-soft no-underline">DOCTORS</a>
+				<div class="panel absolute left-1/2 top-full hidden w-[180px] -translate-x-1/2 flex-col gap-[6px] rounded-[5px] bg-accent p-2 group-hover:flex">
+					<div class="panel__row cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+						Phillis K Vance MD
+					</div>
+					<div class="panel__row cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+						Stanley K Hudson MD
+					</div>
+					<div class="panel__row cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+						Kevin D Malone MD
+					</div>
+					<div class="panel__row cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+						Angela S Martin MD
+					</div>
+				</div>
+			</li>
+			<li><a href="#contact" class="menu__link text-soft no-underline">CONTACT</a></li>
+		</ul>
+	</nav>
+
+	<div class="topbar__actions hidden xs:flex items-center gap-4">
+		<a href="#" class="auth-btn text-[13px] md:text-[15px] font-bold text-soft no-underline">LOG IN</a>
+		<a href="#" class="btn btn--outline inline-flex h-[32px] w-[72px] items-center justify-center rounded-[5px] bg-soft text-[12px] font-bold text-accent no-underline md:h-[38px] md:w-[86px] md:text-[15px]">
+			SIGN UP
+		</a>
+	</div>
+</header>
+
+<main>
+	<section class="hero-block grid grid-cols-1 gap-8 px-6 py-10 md:px-12 lg:px-24 lg:grid-cols-2">
+		<div>
+			<h1 class="hero-block__title mb-8 text-[32px] leading-[1.22] font-bold md:text-[40px]">
+				Dedicated Health<br> Care Specialists
+			</h1>
+			<p class="hero-block__desc mb-4 text-[12px] leading-[2] text-black">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum dui a eros egestas in blandit diam
+				condimentum. Praesent ut dignissim leo. Vestibulum viverra aliquet turpis, non vehicula purus condimentum eu.
+			</p>
+			<p class="hero-block__desc mb-8 text-[12px] leading-[2] text-black">
+				Vivamus laoreet consectetur tempor. Etiam consequat mi in magna blandit, ac maximus ligula. Baculis. Mauris est
+				sapien, maximus a felis at, vehicula dapibus diam. Vivamus interdum risus eu mi accumsan, nec placerat sem
+				pellentesque.
+			</p>
+			<a href="services.html"
+			   class="btn btn--primary inline-flex h-12 w-[134px] items-center justify-center rounded-[5px] bg-accent text-[15px] font-bold text-soft no-underline">
+				LEARN MORE
+			</a>
+		</div>
+
+		<div class="flex justify-center lg:justify-end">
+			<img src="assets/hero-screenshot.png"
+				 alt="App screenshot"
+				 class="hero-block__image h-[389px] w-[603px] max-w-full rounded-[10px] object-cover">
+		</div>
+	</section>
+
+	<section class="tiles flex justify-center px-6 pb-10">
+		<div class="tiles__wrapper grid max-w-[1200px] grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+			<article class="tile flex h-[350px] w-full max-w-[400px] flex-col justify-between rounded-[10px] bg-soft p-10 text-center mx-auto">
+				<div>
+					<h3 class="tile__heading mb-5 text-[20px] font-bold">EMERGENCIES</h3>
+					<p class="tile__text mb-8 text-[12px] leading-[1.83] text-black text-justify">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum dui a eros egestas in blandit diam
+						condimentum. Praesent ut dignissim leo. Vestibulum viverra aliquet turpis, non vehicula purus condimentum eu.
+					</p>
+				</div>
+				<a href="#contact"
+				   class="tile__btn inline-flex items-center justify-center rounded-[5px] bg-accent px-5 py-2 text-[15px] font-bold text-soft no-underline">
+					MORE INFO
+				</a>
+			</article>
+
+			<article class="tile flex h-[350px] w-full max-w-[400px] flex-col justify-between rounded-[10px] bg-soft p-10 text-center mx-auto">
+				<div>
+					<h3 class="tile__heading mb-5 text-[20px] font-bold">OPERATING HOURS</h3>
+					<div class="schedule mb-8 flex flex-col gap-5 text-left text-[12px] text-black">
+						<div class="schedule__line flex justify-between">
+							<span>MONDAY-FRIDAY</span>
+							<span>08:00-18:00</span>
+						</div>
+						<div class="schedule__separator h-px bg-black/25"></div>
+						<div class="schedule__line flex justify-between">
+							<span>SATURDAY</span>
+							<span>10:00-16:00</span>
+						</div>
+						<div class="schedule__line flex justify-between">
+							<span>SUNDAY</span>
+							<span>10:00-14:00</span>
+						</div>
+					</div>
+				</div>
+				<a href="#contact"
+				   class="tile__btn inline-flex items-center justify-center rounded-[5px] bg-accent px-6 py-2 text-[15px] font-bold text-soft no-underline">
+					MAKE AN APPOINTMENT
+				</a>
+			</article>
+
+			<article class="tile flex h-[350px] w-full max-w-[400px] flex-col justify-between rounded-[10px] bg-soft p-10 text-center mx-auto">
+				<div>
+					<h3 class="tile__heading mb-5 text-[20px] font-bold">TEST RESULTS</h3>
+					<p class="tile__text mb-8 text-[12px] leading-[1.83] text-black text-justify">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum dui a eros egestas in blandit diam
+						condimentum. Praesent ut dignissim leo. Vestibulum viverra aliquet turpis, non vehicula purus condimentum eu.
+					</p>
+				</div>
+				<a href="#contact"
+				   class="tile__btn inline-flex items-center justify-center rounded-[5px] bg-accent px-6 py-2 text-[15px] font-bold text-soft no-underline">
+					CHECK TEST
+				</a>
+			</article>
+		</div>
+	</section>
+
+	<section id="staff" class="staff px-6 pb-10">
+		<h2 class="staff__title mb-6 ml-0 text-center text-[34px] font-bold md:ml-[60px] md:text-left md:text-[40px]">
+			Doctors
+		</h2>
+
+		<div class="staff__grid grid gap-8 md:grid-cols-2 xl:grid-cols-3 justify-items-center">
+			<article class="doctor-card flex h-[190px] w-full max-w-[427px] items-center gap-10 rounded-[10px] bg-soft p-10">
+				<img src="assets/doctor-1-5030f4.png" alt="Phillis K Vance MD"
+					 class="doctor-card__photo h-[110px] w-[110px] rounded-full object-cover">
+				<div class="doctor-card__body flex flex-1 flex-col items-center justify-center text-center">
+					<h3 class="doctor-card__name mb-4 whitespace-nowrap text-[18px] font-medium">
+						Phillis K Vance MD
+					</h3>
+					<span class="tag inline-block rounded-[5px] bg-dark px-4 py-2 text-[14px] text-soft">
+							Family Medicine
+						</span>
+				</div>
+			</article>
+
+			<article class="doctor-card flex h-[190px] w-full max-w-[427px] items-center gap-10 rounded-[10px] bg-soft p-10">
+				<img src="assets/doctor-2-2d8bb5.png" alt="Stanley K Hudson MD"
+					 class="doctor-card__photo h-[110px] w-[110px] rounded-full object-cover">
+				<div class="doctor-card__body flex flex-1 flex-col items-center justify-center text-center">
+					<h3 class="doctor-card__name mb-4 whitespace-nowrap text-[18px] font-medium">
+						Stanley K Hudson MD
+					</h3>
+					<span class="tag inline-block rounded-[5px] bg-dark px-4 py-2 text-[14px] text-soft">
+							Internal Medicine
+						</span>
+				</div>
+			</article>
+
+			<article class="doctor-card flex h-[190px] w-full max-w-[427px] items-center gap-10 rounded-[10px] bg-soft p-10">
+				<img src="assets/doctor-3-4cf5be.png" alt="Kevin D Malone MD"
+					 class="doctor-card__photo h-[110px] w-[110px] rounded-full object-cover">
+				<div class="doctor-card__body flex flex-1 flex-col items-center justify-center text-center">
+					<h3 class="doctor-card__name mb-4 whitespace-nowrap text-[18px] font-medium">
+						Kevin D Malone MD
+					</h3>
+					<span class="tag inline-block rounded-[5px] bg-dark px-4 py-2 text-[14px] text-soft">
+							Cardiology
+						</span>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<footer id="contact" class="footer flex flex-col gap-10 px-6 pb-10 pt-6 lg:flex-row lg:items-start lg:px-24">
+		<div class="mb-4 lg:mb-0">
+			<div class="brand brand--footer relative flex h-9 w-[203px] items-center">
+				<span class="absolute left-[11px] top-0 h-[13px] w-[13px] rounded-full bg-accent"></span>
+				<span class="absolute left-[23px] top-[11px] h-[13px] w-[13px] rounded-full bg-accent"></span>
+				<span class="absolute left-0 top-[11px] h-[13px] w-[13px] rounded-full bg-accent"></span>
+				<span class="absolute left-[11px] top-[23px] h-[13px] w-[13px] rounded-full bg-accent"></span>
+				<span class="ml-[46px] text-[19px] font-bold text-accent">HealthSpecialist</span>
+			</div>
+		</div>
+
+		<div class="footer__sections grid flex-1 grid-cols-1 gap-8 md:grid-cols-3">
+			<div>
+				<h4 class="footer__caption mb-3 text-[13px] font-bold">SERVICES</h4>
+				<ul class="footer__list flex list-none flex-col gap-3 text-[10px]">
+					<li>Family Medicine</li>
+					<li>Internal Medicine</li>
+					<li>Cardiology</li>
+					<li>Physical Therapy</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="footer__caption mb-3 text-[13px] font-bold">DOCTORS</h4>
+				<ul class="footer__list flex list-none flex-col gap-3 text-[10px]">
+					<li>Phillis K Vance MD</li>
+					<li>Stanley K Hudson MD</li>
+					<li>Kevin D Malone MD</li>
+					<li>Angela S Martin MD</li>
+				</ul>
+			</div>
+
+			<div class="flex flex-col items-start gap-3">
+				<h4 class="footer__caption mb-3 text-[13px] font-bold">CONTACT</h4>
+				<div class="contact-box flex h-[58px] w-[198px] items-center gap-2 rounded-[5px] bg-accent px-3 py-2 text-white">
+					<img src="assets/icon-phone.png" alt="phone" class="contact-box__icon h-[26px] w-[26px]">
+					<span class="contact-box__text text-[15px] font-bold">(404)123 - 4567</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</main>
+
+</body>
+</html>

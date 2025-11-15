@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HealthSpecialist — Services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: "#4593FF",
+                        soft: "#F8FBFF",
+                        dark: "#3B4053"
+                    },
+                    borderRadius: {
+                        "r-s": "5px",
+                        "r-m": "10px",
+                        "xxl": "18px"
+                    },
+                    boxShadow: {
+                        card: "0 8px 18px rgba(0,0,0,0.04)",
+                        cardHover: "0 12px 24px rgba(0,0,0,0.08)",
+                        strongCard: "0 18px 40px rgba(0,0,0,0.12)"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            animation: fadeInUp 0.7s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 flex items-center justify-between bg-accent px-6 md:px-10 py-4">
+    <div class="relative flex h-9 w-[203px] items-center">
+        <span class="absolute left-[11px] top-0 h-[13px] w-[13px] rounded-full bg-soft"></span>
+        <span class="absolute left-[23px] top-[11px] h-[13px] w-[13px] rounded-full bg-soft"></span>
+        <span class="absolute left-0 top-[11px] h-[13px] w-[13px] rounded-full bg-soft"></span>
+        <span class="absolute left-[11px] top-[23px] h-[13px] w-[13px] rounded-full bg-soft"></span>
+        <span class="ml-[46px] text-[19px] font-bold text-white">HealthSpecialist</span>
+    </div>
+
+    <nav class="flex flex-1 justify-center">
+        <ul class="flex list-none gap-6 md:gap-10 xl:gap-[70px] text-[11px] md:text-[13px] font-medium">
+            <li><a href="index.html" class="text-soft no-underline">HOME</a></li>
+            <li><a href="#" class="text-soft no-underline">ABOUT</a></li>
+            <li><a href="services.html" class="text-white font-bold underline">SERVICES</a></li>
+            <li class="relative group">
+                <a href="#" class="text-soft no-underline">DOCTORS</a>
+                <div
+                        class="absolute left-1/2 top-full hidden w-[180px] -translate-x-1/2 flex-col rounded-[5px] bg-accent p-2 group-hover:flex">
+                    <div
+                            class="cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+                        Phillis K Vance MD
+                    </div>
+                    <div
+                            class="cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+                        Stanley K Hudson MD
+                    </div>
+                    <div
+                            class="cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+                        Kevin D Malone MD
+                    </div>
+                    <div
+                            class="cursor-pointer rounded-[5px] px-2 py-3 text-center text-[10px] text-white hover:bg-white hover:text-accent">
+                        Angela S Martin MD
+                    </div>
+                </div>
+            </li>
+            <li><a href="#contacts" class="text-soft no-underline">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="hidden xs:flex items-center gap-4">
+        <a class="text-white text-[13px] md:text-[15px] font-bold no-underline" href="#">LOG IN</a>
+        <a class="inline-flex h-[32px] w-[72px] items-center justify-center rounded-[5px] bg-soft text-[12px] md:text-[15px]
+				font-bold text-accent no-underline" href="#">
+            SIGN UP
+        </a>
+    </div>
+</header>
+
+<main class="services-page pb-20">
+
+    <!-- HERO -->
+    <section class="relative px-6 md:px-24 py-16 md:py-20 fade-in">
+        <div class="absolute inset-0 opacity-[0.16] bg-center bg-cover pointer-events-none"
+             style="background-image: url('assets/medical-abstract-vector-blue-background.jpg');">
+        </div>
+
+        <div class="relative grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 items-center">
+            <div>
+                <h1 class="text-[40px] font-bold text-dark leading-tight mb-4">
+                    All Care You Need<br />In One Place
+                </h1>
+                <p class="text-[15px] leading-[1.8] text-black mb-6">
+                    Choose from a wide range of diagnostics, treatments and recovery programs.
+                    Book visits online, get results digitally and stay connected with your doctor.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#svc-list"
+                       class="inline-flex items-center justify-center rounded-[5px] bg-accent text-white px-6 py-3 font-bold">
+                        View services
+                    </a>
+                    <a href="#contacts"
+                       class="inline-flex items-center justify-center rounded-[5px] border-2 border-accent text-accent px-6 py-3 font-bold hover:bg-accent hover:text-white transition">
+                        Book appointment
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center lg:justify-end">
+                <img src="assets/services-hero-illustration.png" class="max-w-[360px] rounded-xxl shadow-strongCard" />
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="px-6 md:px-24 py-10 fade-in">
+        <h2 class="text-[32px] font-bold text-center text-dark mb-2">Why Patients Choose Us</h2>
+        <p class="text-center text-[14px] text-black mb-8">
+            We combine experience, technology and personal care to deliver safe and efficient treatment.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+            <!-- CARD -->
+            <div
+                    class="bg-soft rounded-xl p-6 text-center shadow-card hover:shadow-cardHover transition hover:-translate-y-1">
+                <div class="bg-[#E6F1FF] w-[54px] h-[54px] rounded-full mx-auto mb-3 flex items-center justify-center">
+                    <img src="assets/icon-team.png" class="w-[32px]" />
+                </div>
+                <h3 class="font-bold text-[16px] mb-1">Certified Doctors</h3>
+                <p class="text-[13px] leading-[1.6]">
+                    Board-certified specialists with years of practical experience.
+                </p>
+            </div>
+
+            <div
+                    class="bg-soft rounded-xl p-6 text-center shadow-card hover:shadow-cardHover transition hover:-translate-y-1">
+                <div class="bg-[#E6F1FF] w-[54px] h-[54px] rounded-full mx-auto mb-3 flex items-center justify-center">
+                    <img src="assets/icon-support.png" class="w-[32px]" />
+                </div>
+                <h3 class="font-bold text-[16px] mb-1">24/7 Support</h3>
+                <p class="text-[13px] leading-[1.6]">
+                    Emergency line and quick consultations for urgent questions.
+                </p>
+            </div>
+
+            <div
+                    class="bg-soft rounded-xl p-6 text-center shadow-card hover:shadow-cardHover transition hover:-translate-y-1">
+                <div class="bg-[#E6F1FF] w-[54px] h-[54px] rounded-full mx-auto mb-3 flex items-center justify-center">
+                    <img src="assets/icon-equipment.png" class="w-[32px]" />
+                </div>
+                <h3 class="font-bold text-[16px] mb-1">Modern Equipment</h3>
+                <p class="text-[13px] leading-[1.6]">
+                    Digital diagnostics, imaging and lab tests for accuracy.
+                </p>
+            </div>
+
+            <div
+                    class="bg-soft rounded-xl p-6 text-center shadow-card hover:shadow-cardHover transition hover:-translate-y-1">
+                <div class="bg-[#E6F1FF] w-[54px] h-[54px] rounded-full mx-auto mb-3 flex items-center justify-center">
+                    <img src="assets/icon-care.png" class="w-[32px]" />
+                </div>
+                <h3 class="font-bold text-[16px] mb-1">Personalized Care</h3>
+                <p class="text-[13px] leading-[1.6]">
+                    Individual plans tailored to lifestyle and medical history.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORY CHIPS -->
+    <section class="px-6 md:px-24 py-10 fade-in">
+        <h2 class="text-[32px] font-bold text-center text-dark mb-2">Service Categories</h2>
+        <p class="text-center text-[14px] text-black mb-6">
+            Quickly navigate through the main types of care available at our clinic.
+        </p>
+
+        <div class="flex overflow-x-auto gap-3 py-3">
+            <button class="px-5 py-2 rounded-full border border-accent text-white bg-accent font-medium">
+                Family Care
+            </button>
+            <button class="px-5 py-2 rounded-full border border-accent text-accent bg-white font-medium">
+                Cardiology
+            </button>
+            <button class="px-5 py-2 rounded-full border border-accent text-accent bg-white font-medium">
+                Physical Therapy
+            </button>
+            <button class="px-5 py-2 rounded-full border border-accent text-accent bg-white font-medium">
+                Diagnostics
+            </button>
+            <button class="px-5 py-2 rounded-full border border-accent text-accent bg-white font-medium">
+                Preventive Care
+            </button>
+            <button class="px-5 py-2 rounded-full border border-accent text-accent bg-white font-medium">
+                Online Consultations
+            </button>
+        </div>
+    </section>
+
+    <!-- FEATURED SERVICE -->
+    <section class="px-6 md:px-24 py-10 fade-in grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 items-center">
+        <div>
+            <h2 class="text-[32px] font-bold text-dark mb-4 text-left">Comprehensive Cardiology Program</h2>
+            <p class="text-[14px] text-black mb-2">
+                Early detection and prevention with full diagnostics:
+            </p>
+            <ul class="list-disc ml-5 text-[14px] text-black leading-[1.7] mb-4">
+                <li>ECG, ultrasound and blood tests in one visit</li>
+                <li>Consultation with a cardiologist and plan</li>
+                <li>Follow-up online monitoring</li>
+            </ul>
+            <a href="#contacts"
+               class="inline-flex items-center justify-center rounded-[5px] bg-accent text-white px-6 py-3 font-bold">
+                Schedule check
+            </a>
+        </div>
+
+        <div class="flex justify-center lg:justify-end">
+            <img src="assets/featured-cardiology.png" class="max-w-[360px] rounded-xxl shadow-strongCard" />
+        </div>
+    </section>
+
+    <!-- MAIN SERVICES GRID -->
+    <section id="svc-list" class="px-6 md:px-24 py-10 fade-in">
+        <h2 class="text-[32px] font-bold text-center text-dark mb-2">Main Services</h2>
+        <p class="text-center text-[14px] text-black mb-8">
+            Most requested services our patients use daily.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-soft rounded-xl p-5 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition">
+                <img src="assets/icon-family.png" class="w-[40px] mb-1" />
+                <h3 class="font-bold text-[17px] mb-1">Family Medicine</h3>
+                <p class="text-[13px] leading-[1.7]">
+                    Ongoing care for adults and children: visits, vaccination, chronic disease management.
+                </p>
+                <a href="#contacts" class="text-accent text-[13px] font-semibold mt-1 inline-block">
+                    Book family visit →
+                </a>
+            </div>
+
+            <div class="bg-soft rounded-xl p-5 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition">
+                <img src="assets/icon-stethoscope.png" class="w-[40px] mb-1" />
+                <h3 class="font-bold text-[17px] mb-1">Internal Medicine</h3>
+                <p class="text-[13px] leading-[1.7]">
+                    Management of complex conditions and long-term prevention plans.
+                </p>
+                <a href="#contacts" class="text-accent text-[13px] font-semibold mt-1 inline-block">
+                    Talk to internist →
+                </a>
+            </div>
+
+            <div class="bg-soft rounded-xl p-5 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition">
+                <img src="assets/icon-therapy.png" class="w-[40px] mb-1" />
+                <h3 class="font-bold text-[17px] mb-1">Physical Therapy</h3>
+                <p class="text-[13px] leading-[1.7]">
+                    Recovery after injuries, surgeries, mobility improvement, pain relief.
+                </p>
+                <a href="#contacts" class="text-accent text-[13px] font-semibold mt-1 inline-block">
+                    Start rehab →
+                </a>
+            </div>
+
+            <div class="bg-soft rounded-xl p-5 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition">
+                <img src="assets/icon-lab.png" class="w-[40px] mb-1" />
+                <h3 class="font-bold text-[17px] mb-1">Laboratory Tests</h3>
+                <p class="text-[13px] leading-[1.7]">
+                    Fast blood & urine tests with digital result delivery.
+                </p>
+                <a href="#contacts" class="text-accent text-[13px] font-semibold mt-1 inline-block">
+                    View test packages →
+                </a>
+            </div>
+
+            <div class="bg-soft rounded-xl p-5 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition">
+                <img src="assets/icon-online.png" class="w-[40px] mb-1" />
+                <h3 class="font-bold text-[17px] mb-1">Online Consultations</h3>
+                <p class="text-[13px] leading-[1.7]">
+                    Secure video calls, prescription renewals, remote monitoring.
+                </p>
+                <a href="#contacts" class="text-accent text-[13px] font-semibold mt-1 inline-block">
+                    Book online call →
+                </a>
+            </div>
+
+            <div class="bg-soft rounded-xl p-5 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition">
+                <img src="assets/icon-preventive.png" class="w-[40px] mb-1" />
+                <h3 class="font-bold text-[17px] mb-1">Preventive Checkups</h3>
+                <p class="text-[13px] leading-[1.7]">
+                    Early detection and wellness planning for long-term health.
+                </p>
+                <a href="#contacts" class="text-accent text-[13px] font-semibold mt-1 inline-block">
+                    Choose plan →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTORS SCROLL -->
+    <section class="px-6 md:px-24 py-10 fade-in">
+        <h2 class="text-[32px] font-bold text-center text-dark mb-4">Doctors You May Need</h2>
+
+        <div class="flex overflow-x-auto gap-4 py-3 px-1 md:px-0">
+
+            <div
+                    class="min-w-[260px] bg-soft rounded-xl p-4 flex items-center gap-3 shadow-card hover:-translate-y-1 transition hover:bg-[#E8F1FF]">
+                <img src="assets/doctor-1-5030f4.png" class="w-[64px] h-[64px] rounded-full object-cover" />
+                <div>
+                    <h3 class="font-bold text-[14px] whitespace-nowrap">Phillis K Vance MD</h3>
+                    <span class="inline-block px-3 py-[4px] rounded-full text-white text-[11px] bg-dark">Family Medicine</span>
+                </div>
+            </div>
+
+            <div
+                    class="min-w-[260px] bg-soft rounded-xl p-4 flex items-center gap-3 shadow-card hover:-translate-y-1 transition hover:bg-[#E8F1FF]">
+                <img src="assets/doctor-2-2d8bb5.png" class="w-[64px] h-[64px] rounded-full object-cover" />
+                <div>
+                    <h3 class="font-bold text-[14px] whitespace-nowrap">Stanley K Hudson MD</h3>
+                    <span class="inline-block px-3 py-[4px] rounded-full text-white text-[11px] bg-dark">Internal Medicine</span>
+                </div>
+            </div>
+
+            <div
+                    class="min-w-[260px] bg-soft rounded-xl p-4 flex items-center gap-3 shadow-card hover:-translate-y-1 transition hover:bg-[#E8F1FF]">
+                <img src="assets/doctor-3-4cf5be.png" class="w-[64px] h-[64px] rounded-full object-cover" />
+                <div>
+                    <h3 class="font-bold text-[14px] whitespace-nowrap">Kevin D Malone MD</h3>
+                    <span class="inline-block px-3 py-[4px] rounded-full text-white text-[11px] bg-dark">Cardiology</span>
+                </div>
+            </div>
+
+            <div
+                    class="min-w-[260px] bg-soft rounded-xl p-4 flex items-center gap-3 shadow-card hover:-translate-y-1 transition hover:bg-[#E8F1FF]">
+                <img src="assets/doctor-3-4cf5be1.png" class="w-[64px] h-[64px] rounded-full object-cover" />
+                <div>
+                    <h3 class="font-bold text-[14px] whitespace-nowrap">Angela S Martin MD</h3>
+                    <span class="inline-block px-3 py-[4px] rounded-full text-white text-[11px] bg-dark">Psychologist</span>
+                </div>
+            </div>
+
+            <div
+                    class="min-w-[260px] bg-soft rounded-xl p-4 flex items-center gap-3 shadow-card hover:-translate-y-1 transition hover:bg-[#E8F1FF]">
+                <img src="assets/doctor-3-4cf5be12.png" class="w-[64px] h-[64px] rounded-full object-cover" />
+                <div>
+                    <h3 class="font-bold text-[14px] whitespace-nowrap">Piter M Jonson DD</h3>
+                    <span class="inline-block px-3 py-[4px] rounded-full text-white text-[11px] bg-dark">Physical Therapist</span>
+                </div>
+            </div>
+
+            <div
+                    class="min-w-[260px] bg-soft rounded-xl p-4 flex items-center gap-3 shadow-card hover:-translate-y-1 transition hover:bg-[#E8F1FF]">
+                <img src="assets/doctor-3-4cf5be13.png" class="w-[64px] h-[64px] rounded-full object-cover" />
+                <div>
+                    <h3 class="font-bold text-[14px] whitespace-nowrap">Marta D Piterson MD</h3>
+                    <span class="inline-block px-3 py-[4px] rounded-full text-white text-[11px] bg-dark">Surgeon</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+    <section class="px-6 md:px-24 py-10 fade-in">
+        <h2 class="text-[32px] font-bold text-center text-dark mb-4">What Our Patients Say</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-soft rounded-xl p-5 shadow-card">
+                <p class="text-[13px] leading-[1.7] mb-2">
+                    “Booking an appointment online and getting test results in my phone saved me so much time.”
+                </p>
+                <p class="text-[12px] font-semibold text-dark">— Anna K.</p>
+            </div>
+
+            <div class="bg-soft rounded-xl p-5 shadow-card">
+                <p class="text-[13px] leading-[1.7] mb-2">
+                    “The cardiology program helped me change my lifestyle and control my blood pressure.”
+                </p>
+                <p class="text-[12px] font-semibold text-dark">— Michael D.</p>
+            </div>
+
+            <div class="bg-soft rounded-xl p-5 shadow-card">
+                <p class="text-[13px] leading-[1.7] mb-2">
+                    “Doctors always explain every step and make sure I understand the plan.”
+                </p>
+                <p class="text-[12px] font-semibold text-dark">— Sofia L.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="px-6 md:px-24 py-10 fade-in">
+        <h2 class="text-[32px] font-bold text-center text-dark mb-4">FAQ</h2>
+
+        <div class="max-w-[720px] mx-auto">
+            <details class="bg-soft rounded-xl shadow-card p-4 mb-3">
+                <summary class="cursor-pointer font-semibold text-[14px] text-dark">How can I book an appointment?</summary>
+                <p class="text-[13px] mt-2">You can call, email or use our online system.</p>
+            </details>
+
+            <details class="bg-soft rounded-xl shadow-card p-4 mb-3">
+                <summary class="cursor-pointer font-semibold text-[14px] text-dark">Do you accept insurance?</summary>
+                <p class="text-[13px] mt-2">Yes, we work with most major insurance providers.</p>
+            </details>
+
+            <details class="bg-soft rounded-xl shadow-card p-4">
+                <summary class="cursor-pointer font-semibold text-[14px] text-dark">Can I get test results online?</summary>
+                <p class="text-[13px] mt-2">Results are delivered securely to your portal.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contacts" class="px-6 md:px-24 py-10 fade-in">
+        <div
+                class="rounded-xxl bg-gradient-to-r from-accent to-[#3a7ee0] text-white text-center p-8 shadow-strongCard">
+            <h2 class="text-[26px] font-bold mb-2">Ready to book your visit?</h2>
+            <p class="text-[14px] mb-5">
+                Call us, send an email or come directly to the clinic — we'll help you choose the best option.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="tel:+14041234567"
+                   class="rounded-xl bg-white/20 hover:bg-white/30 transition p-4 flex flex-col items-center">
+                    <span class="text-[12px] opacity-90">Call Us</span>
+                    <span class="text-[16px] font-bold">(404) 123-4567</span>
+                </a>
+
+                <a href="mailto:info@healthspecialist.com"
+                   class="rounded-xl bg-white/20 hover:bg-white/30 transition p-4 flex flex-col items-center">
+                    <span class="text-[12px] opacity-90">Email</span>
+                    <span class="text-[16px] font-bold">info@healthspecialist.com</span>
+                </a>
+
+                <div class="rounded-xl bg-white/20 p-4 flex flex-col items-center">
+                    <span class="text-[12px] opacity-90">Location</span>
+                    <span class="text-[16px] font-bold">123 Greenway Rd, Atlanta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
